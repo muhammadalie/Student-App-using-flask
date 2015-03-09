@@ -1,0 +1,80 @@
+ <html>
+
+<style>
+	h1{
+		color:#ffc;
+		background-color:purple;
+		text-decoration:underline;
+		font-style: italic;
+    		text-transform: uppercase;
+		 margin: 10px;
+   		 padding: 4px;
+	}
+        p {
+    font-family:areal,helvatica;
+    color:rgb(33,88,93);
+    word-spacing:0.1em;
+    font-size:1em;
+    line-height: 1.5;
+    text-align: left;
+        }
+        body{
+                font-family:areal,helvatica;
+                font-size:20px;
+                color:rgb(64,57,33);
+
+        }
+        li {
+    color: #900;
+    font-style: italic;
+}
+</style>
+
+        <head>
+        <title>Home Page</title>	        
+	 <body>
+	<div>To make a account: <a href="/signup">Signup</a></div>
+        
+        <h1>Student Record</h1>
+	<form action="" method="post" name="login">
+                {{ sign.hidden_tag() }}
+
+        <p>
+                User name:
+                {{ sign.username(size=16) }}<br>
+        </p>
+        <p>
+                Password: 
+                  {{ sign.password(size=16) }}<br>
+        </p>    
+
+        <p><input type="submit" value="Sign in"></p>
+        </form>
+	
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<span style="color: red;">[{{ message }}]</span>
+			{% endfor %}
+				
+		{% endif %}
+	{% endwith %}
+
+
+	<form action="" method="post" name="login">
+                {{ s.hidden_tag() }}
+
+	<p>
+                Search:<br>
+                {{ s.signin(size=80) }}<br>
+        </p>
+
+	<p><input type="submit" value="search"></p>
+	</form>
+
+
+        </body>
+</html>
+ 
+

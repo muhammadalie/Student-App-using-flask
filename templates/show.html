@@ -1,0 +1,37 @@
+<html>
+<style>
+     	p {
+    font-family:areal,helvatica;
+    color:rgb(33,88,33);
+    word-spacing: 1em;
+    font-size:1em;
+    line-height: 1.5;
+    text-align: left;
+	}
+	body{	
+		font-family:areal,helvatica;
+		font-size:20px;
+		color:rgb(0,200,33);
+
+	}
+	li {
+    color: #900;
+    font-style: italic;
+}
+</style>
+<a href="/">Home</a>
+<body>
+<h2>Your Result</h2>
+	{% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ol>   {% for message in messages %}
+                         <li>       <p>{{ message }}</p>
+                        {% endfor %}
+		      <ol>
+
+                {% endif %}
+        {% endwith %}
+
+
+</body>
+</html>

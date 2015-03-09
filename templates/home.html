@@ -1,0 +1,23 @@
+<html>
+	<a href="/logout">Signout</a>
+	<body>
+	<h1>RECORD</h1>
+        <form action="" method="post" name="login">
+                {{ form.hidden_tag() }}
+        <p>
+                Roll Number:<br>
+                {{ form.openid(size=3) }}<br>
+        </p>
+                <p>
+                Name:<br>
+                {{ form.name(size=80) }}<br>
+        </p>
+        <p>
+                Mark:<br>
+                {{ form.mark(size=4) }}<br>
+        </p>
+        <p><input type="submit" value="Submit"></p>
+	</form>
+
+	</body>
+</html>

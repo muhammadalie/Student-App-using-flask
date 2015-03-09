@@ -1,0 +1,22 @@
+<html>
+	<a href="/">Home</a>
+	<body>
+	<h1>SignUp</h1>
+	<form action="" method="post" name="login">
+                {{ u.hidden_tag() }} 
+
+        <p> 
+                User name: 
+                {{ u.username(size=16) }}<br>
+        </p> 
+        <p>
+                Password: 
+                  {{ u.password(size=16) }}<br>
+        </p>
+
+        <p><input type="submit" value="Sign up"></p>
+        </form>
+
+		
+	</body>
+</html>
